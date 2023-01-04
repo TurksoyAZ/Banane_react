@@ -8,7 +8,7 @@ function Banane() {
 
     const pay = () => {
         if (input !== '') {
-            setEinzahlen(input)
+            setEinzahlen(einzahlen + Number(input))
             setInput('')
         }
     }
