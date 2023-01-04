@@ -14,7 +14,10 @@ function Banane() {
     }
 
     const payOff = () => {
-        setEinzahlen(einzahlen - input)
+        if (input !== '') {
+            setEinzahlen(einzahlen - input)
+            setInput('')
+        }
     }
 
     return (
@@ -31,7 +34,7 @@ function Banane() {
 
                     <div className="zahlBox">
 
-                        <input type="number" value={input} onChange={e => setInput(e.target.value)} />
+                        <input type="number" placeholder="Geldbetrag eingeben" value={input} onChange={e => setInput(e.target.value)} />
 
                         <div>
                             <button onClick={pay}>Einzahlen</button>
